@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="header ">
+        <h1>To-do List</h1>
+    </div>
+    <div class="side">
+        <ul>
+            <li *ngFor = "let i of items; let ind = index" class="borda">
+                {{i}}
+                <button (click) = "removeItem(ind)" class="excluir">X</button>
+            </li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        <span style="font-size: 25px;">Adicione uma tarefa</span>
+        <br><br>
+        <input [(ngModel)] = "novoItem" placeholder="Adicione um item" class="addItem">
+        <br><br>
+        <button (click) = "pushItem()" class="borda">Adicionar</button>
+    </div>
+</div>
